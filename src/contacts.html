@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Contacts</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+	<link rel="stylesheet" href="template/styles/css/style.css" />
+	<link rel="stylesheet" href="template/styles/css/responsive.css" />
+	<script src="template/scripts/libs.js"></script>
+	<script src="template/scripts/common.js"></script>
+	<!--[if lt IE 9]>
+	<script>
+		document.createElement('header');
+		document.createElement('nav');
+		document.createElement('main');
+		document.createElement('section');
+		document.createElement('article');
+		document.createElement('aside');
+		document.createElement('footer');
+	</script>
+	<![endif]-->
+</head>
+<body>
+
+
+
+
+
+
+<div class="main-wrap">
+	<div class="sidenav" id="slide-out">
+		<div class="sidenav__close"><i class="mdi mdi-close"></i><span>Меню</span></div>
+		<div class="sidenav__list">
+			<ul>
+				<li><a href="index.html"><i class="mdi mdi-magnify"></i><span>Поиск авто</span></a></li>
+				<li><a href="order.html"><i class="mdi mdi-car"></i><span>Мои бронирования</span></a></li>
+				<li><a href="contacts.html"><i class="mdi mdi-phone"></i><span>Контакты</span></a></li>
+				<li><div class="divider"></div></li>
+				<li><a href="lang.html"><i class="mdi mdi-web"></i><span>Язык</span></a></li>
+				<li><a href="currency.html"><i class="mdi mdi-credit-card"></i><span>Валюта</span></a></li>
+				<li><div class="divider"></div></li>
+				<li><a href="about.html"><i class="mdi mdi-account-multiple"></i><span>О нас</span></a></li>
+				<li><a href="faq.html"><i class="mdi mdi-forum"></i><span>FAQ</span></a></li>
+				<li><a href="policy.html"><i class="mdi mdi-file-document"></i><span>Политика  конфиденциальности</span></a></li>
+			</ul>
+		</div>
+	</div>
+	<nav class="nav">
+		<div class="nav-wrapper">
+			<a href="#" data-target="slide-out" class="hum sidenav-trigger mdi mdi-menu"></a>
+			<div class="brand-logo">Contacts</div>
+		</div>
+	</nav>
+
+	<main class="main">
+		<div class="main-case">
+			<div class="container">
+				<div class="contacts row">
+					<div class="col l6 m12">
+						<img src="upload/office.png" alt="" class="contacts__office responsive-img">
+						<div class="contacts__block block">
+							<div class="block__title">КОНТАКТНАЯ ИНФОРМАЦИЯ</div>
+							<div class="block__text">
+								<p>Travelocars int.</p>
+								<p>Riga, Latvia</p>
+							</div>
+						</div>
+						<div class="contacts__block block">
+							<div class="block__title">ВРЕМЯ РАБОТЫ</div>
+							<div class="block__text">
+								<p>Пн — Вс: 00:00 — 24:00 (GMT)</p>
+							</div>
+						</div>
+					</div>
+					<div class="col l6 m12">
+						<div class="contacts__block block block_phones">
+							<div class="block__title">ПО ОБЩИМ ВОПРОСАМ ЗВОНИТЕ</div>
+							<div class="block__phones phones">
+								<ul>
+									<li>
+										<img src="upload/flags/united-states.svg" alt="">
+										<span>США</span>
+										<a href="tel:+16464536031">+1 646 4536031</a>
+									</li>
+									<li>
+										<img src="upload/flags/france.svg" alt="">
+										<span>Франция</span>
+										<a href="tel:+33970733530">+33 970733530</a>
+									</li>
+									<li>
+										<img src="upload/flags/italy.svg" alt="">
+										<span>Италия</span>
+										<a href="tel:+39800596725">+39 800 596725</a>
+									</li>
+									<li>
+										<img src="upload/flags/germany.svg" alt="">
+										<span>Германия</span>
+										<a href="tel:+43720228211">+43 720228211</a>
+									</li>
+									<li>
+										<img src="upload/flags/russia.svg" alt="">
+										<span>Россия</span>
+										<a href="tel:+74952257662">+7 495 2257662</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="contacts__block block block_form">
+							<div class="block__title">НАПИШИТЕ НАМ</div>
+							<div class="block__form form">
+								<div class="form__input input input_border">
+									<input type="text" class="input__wrap" placeholder="Ваше имя">
+								</div>
+								<div class="form__input input input_border">
+									<input type="text" class="input__wrap" placeholder="Ваш email">
+								</div>
+								<div class="form__textarea textarea textarea_border">
+									<textarea class="textarea__wrap" placeholder="Ваше сообщение"></textarea>
+								</div>
+								<button class="form__btn btn btn_orange btn_normal">Отправить</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</div>
+</body>
+</html>

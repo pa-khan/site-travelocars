@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>Title</title>
+	<title>Main page</title>
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
 	<link rel="stylesheet" href="template/styles/css/style.css" />
 	<link rel="stylesheet" href="template/styles/css/responsive.css" />
@@ -22,18 +22,95 @@
 </head>
 <body>
 <div class="main-wrap">
-	<header class="header">
-
-	</header>
-
+	<div class="sidenav" id="slide-out">
+		<div class="sidenav__close"><i class="mdi mdi-close"></i><span>Меню</span></div>
+		<div class="sidenav__list">
+			<ul>
+				<li><a href="index.html"><i class="mdi mdi-magnify"></i><span>Поиск авто</span></a></li>
+				<li><a href="order.html"><i class="mdi mdi-car"></i><span>Мои бронирования</span></a></li>
+				<li><a href="contacts.html"><i class="mdi mdi-phone"></i><span>Контакты</span></a></li>
+				<li><div class="divider"></div></li>
+				<li><a href="lang.html"><i class="mdi mdi-web"></i><span>Язык</span></a></li>
+				<li><a href="currency.html"><i class="mdi mdi-credit-card"></i><span>Валюта</span></a></li>
+				<li><div class="divider"></div></li>
+				<li><a href="about.html"><i class="mdi mdi-account-multiple"></i><span>О нас</span></a></li>
+				<li><a href="faq.html"><i class="mdi mdi-forum"></i><span>FAQ</span></a></li>
+				<li><a href="policy.html"><i class="mdi mdi-file-document"></i><span>Политика  конфиденциальности</span></a></li>
+			</ul>
+		</div>
+	</div>
+  <nav class="nav">
+    <div class="nav-wrapper">
+    	<a href="#" data-target="slide-out" class="hum sidenav-trigger mdi mdi-menu"></a>
+      <a href="#" class="brand-logo">TRAVELO<span>CARS</span></a>
+    	<a href="lang.html" class="lang-switcher right"><img src="upload/flags/united-states.svg" alt=""><span>EN</span></a>
+      </ul>
+    </div>
+  </nav>
 
 	<main class="main">
-
+		<div class="main-case">
+			<div class="container">
+				<div class="main-title">Compare car hire deals from 1600 suppliers worldwide</div>
+				<div class="search-arrea input input_border-gray input_radius">
+					<div class="search-arrea__inputus">What’s your pick-up locaiton?</div>
+					<input class="search-arrea__input" placeholder="What’s your pick-up locaiton?">
+					<div class="search-arrea__icon mdi mdi-magnify"></div>
+				</div>
+				<div class="companies">
+					<div class="companies__list row">
+						<div class="companies__item companies__item_green"><img src="upload/logos/europcar.png" alt=""></div>
+						<div class="companies__item"><img src="upload/logos/enterprise.png" alt=""></div>
+						<div class="companies__item companies__item_red"><img src="upload/logos/avis.png" alt=""></div>
+						<div class="companies__item companies__item_black"><img src="upload/logos/herts.png" alt=""></div>
+						<div class="companies__item companies__item_blue"><img src="upload/logos/alamo.png" alt=""></div>
+						<div class="companies__item companies__item_blue-dark"><img src="upload/logos/budget.png" alt=""></div>
+						<div class="companies__item companies__item_green"><img src="upload/logos/national.png" alt=""></div>
+					</div>
+				</div>
+				<div class="advantages">
+					<div class="advantages__list row">
+						<div class="advantages__item">
+							<div class="advantages__title">Никакой доплаты за изменение или отмену</div>
+							<div class="advantages__desc">За 48 часов до начала аренды</div>
+						</div>
+						<div class="advantages__item">
+							<div class="advantages__title">Никакой комиссии за кредитную карту</div>
+							<div class="advantages__desc">Транспарентность и гарантия лучших цен</div>
+						</div>
+						<div class="advantages__item">
+							<div class="advantages__title">Лучшее обслуживание в течении 12 лет</div>
+							<div class="advantages__desc">Лидер на мировом рынке по прокату автомобилей</div>
+						</div>
+					</div>
+				</div>
+				<div class="placeholder"><img src="upload/placeholder.svg" alt=""></div>
+				<div class="picker">
+					<div class="picker__toggle">
+						<div class="picker__drop-text"></div>
+						<div class="picker__drop-icon mdi mdi-"></div>
+					</div>
+					<div class="picker__arrea">
+						<div class="picker__arrea-icon mdi mdi-"></div>
+						<input type="text" class="picker__arrea-input">
+						<div class="picker__arrea-remove mdi mdi-"></div>
+					</div>
+					<div class="picker__list">
+						<ul>
+							<li><i class="mdi mdi-airplane"></i><span>Луисвилль, KY - аэропорт</span></li>
+							<li><i class="mdi mdi-city"></i><span>Name city</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="security">
+			<div class="security__item"><img src="upload/logos/maestro.png" alt=""></div>
+			<div class="security__item"><img src="upload/logos/mastercard.png" alt=""></div>
+			<div class="security__item"><img src="upload/logos/visa.png" alt=""></div>
+			<div class="security__item"><img src="upload/logos/norton.png" alt=""></div>
+		</div>
 	</main>
-
-	<footer class="footer">
-
-	</footer>
 </div>
 </body>
 </html>

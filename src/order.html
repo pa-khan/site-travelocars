@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Мои заказы</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+	<link rel="stylesheet" href="template/styles/css/style.css" />
+	<link rel="stylesheet" href="template/styles/css/responsive.css" />
+	<script src="template/scripts/libs.js"></script>
+	<script src="template/scripts/common.js"></script>
+	<!--[if lt IE 9]>
+	<script>
+		document.createElement('header');
+		document.createElement('nav');
+		document.createElement('main');
+		document.createElement('section');
+		document.createElement('article');
+		document.createElement('aside');
+		document.createElement('footer');
+	</script>
+	<![endif]-->
+</head>
+<body>
+
+
+
+
+
+
+<div class="main-wrap">
+	<div class="sidenav" id="slide-out">
+		<div class="sidenav__close"><i class="mdi mdi-close"></i><span>Меню</span></div>
+		<div class="sidenav__list">
+			<ul>
+				<li><a href="index.html"><i class="mdi mdi-magnify"></i><span>Поиск авто</span></a></li>
+				<li><a href="order.html"><i class="mdi mdi-car"></i><span>Мои бронирования</span></a></li>
+				<li><a href="contacts.html"><i class="mdi mdi-phone"></i><span>Контакты</span></a></li>
+				<li><div class="divider"></div></li>
+				<li><a href="lang.html"><i class="mdi mdi-web"></i><span>Язык</span></a></li>
+				<li><a href="currency.html"><i class="mdi mdi-credit-card"></i><span>Валюта</span></a></li>
+				<li><div class="divider"></div></li>
+				<li><a href="about.html"><i class="mdi mdi-account-multiple"></i><span>О нас</span></a></li>
+				<li><a href="faq.html"><i class="mdi mdi-forum"></i><span>FAQ</span></a></li>
+				<li><a href="policy.html"><i class="mdi mdi-file-document"></i><span>Политика  конфиденциальности</span></a></li>
+			</ul>
+		</div>
+	</div>
+	<nav class="nav">
+		<div class="nav-wrapper">
+			<a href="#" data-target="slide-out" class="hum sidenav-trigger mdi mdi-menu"></a>
+			<div class="brand-logo">Мои заказы</div>
+		</div>
+	</nav>
+
+	<main class="main">
+		<div class="main-case">
+			<div class="container">
+				<div class="order">
+					<div class="order__title">Укажите ваш адрес электронной почты и номер бронирования автомобиля</div>
+					<div class="order__wrap">
+						<div class="order__input input-field input-field_gray">
+							<input type="text" name="email" id="order-email">
+							<label for="order-email">Адрес эл. почты</label>
+						</div>
+						<div class="order__input input-field input-field_gray">
+							<input type="text" name="order" id="order-count">
+							<label for="order-count">Номер бронирования</label>
+						</div>
+						<button class="order__btn btn btn_orange btn_big">Номер бронирования</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</div>
+</body>
+</html>

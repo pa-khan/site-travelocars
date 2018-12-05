@@ -43,8 +43,8 @@ gulp.task('browser-sync', function() {
 gulp.task('scripts', function() {
 	return gulp.src([ 
 		'src/template/libs/jquery/dist/jquery.js',
-		'src/template/libs/jquery-mask-plugin/dist/jquery.mask.js',
-		'src/template/libs/fancybox/dist/jquery.fancybox.js'
+		'src/template/libs/materialize/dist/js/materialize.min.js',
+		'src/template/libs/slick-carousel/slick/slick.js'
 		])
 		.pipe(concat('libs.js')) 
 		.pipe(gulp.dest('src/template/scripts')); 
@@ -52,7 +52,7 @@ gulp.task('scripts', function() {
 
 gulp.task('scriptsMin', function() {
 	return gulp.src([ 
-		'src/template/scripts/libs.min.js'
+		'src/template/scripts/libs.min.js',
 		])
 		.pipe(uglify()) 
 		.pipe(gulp.dest('src/template/scripts')); 

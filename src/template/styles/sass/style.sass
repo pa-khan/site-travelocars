@@ -1,122 +1,676 @@
 /* Including styles files */
-@import sprite.sass
-@import fonts.sass
-@import grid.sass
-@import '../../libs/fancybox/dist/jquery.fancybox.css'
+@import '../../libs/mdi/scss/materialdesignicons.scss'
+@import '../../libs/materialize/sass/materialize.scss'
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic')
+@import '../../libs/slick-carousel/slick/slick.css'
 
+html, body
+	height: 100%
 
-/* Global settings */
-$font-size: 16px
-$font-family-1: 'Tahoma', sans-serif
-$color-1: #000
+.main-wrap
+	color: #4d4d4d
+	background-color: #f4f4f4
+	min-height: 100%
+	padding-top: 64px
+	a
+		color: #4d4d4d
 
+	// overflow-x: hidden
 
-*, :before, :after
-	padding: 0
-	margin: 0
-	border: 0
-	box-sizing: border-box
-
-body
-	font-size: $font-size
-	font-family: $font-family-1
-	color: $color-1
-	background: white
-
-h1, h2, h3, h4, h5, h6
-	font-family: inherit
-	font-size: inherit
-	font-weight: inherit
-
-ul
+.row, .col
 	display: flex
 	flex-wrap: wrap
-	justify-content: flex-start
 
-li
-	display: block
-	list-style-image: none
+.col
+	flex-direction: column
 
-a
-	color: $color-1
-	text-decoration: none
-	border-bottom: 1px solid transparent
-	transition: .3s
+.container
+	padding-left: 15px
+	padding-right: 15px
 
-img
-	display: block
-	max-width: 100% !important
-	max-height: 100% !important
+.header, .main
+	width: 100%
 
-input
-	-webkit-appearance: none
-	-moz-appearance: none
-	appearance: none
 
-input, textarea, button
- outline: none
-
-/* Form elements */
-.input
-	position: relative
-	&__wrap
+.nav
+	z-index: 10
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	padding-left: 30px
+	padding-right: 30px
+	background-color: #0959aa
+	box-shadow: none
+	a
+		color: #fff
+	.brand-logo
+		font-size: 24px
+		span
+			font-weight: 700
+	a.sidenav-trigger
+		font-size: 32px
 		display: block
-		font-size: $font-size
-		font-family: $font-family-1
-		background: white
+		margin-left: 0
+		// margin-right: 30px
+		margin-right: 25px
+
+
+
+.sidenav
+	li
+		> a
+			padding: 0 20px
+			> i
+				width: 24px
+				font-size: 24px
+				margin-right: 20px
+				text-align: center
+				color: #0959aa
+
+	&__close
+		padding-left: 20px
+		padding-right: 20px
+		display: flex
+		align-items: center
+		margin-top: 25px
+		margin-bottom: 25px
+		color: #4d4d4d
+		cursor: pointer
+		i
+			width: 24px
+			font-size: 24px
+			margin-right: 20px
+		span
+			display: inline-block
+			font-size: 24px
+			font-weight: 500
+
+	&__list
+		li
+			> a
+				font-size: 16px
+				height: 52px
+				line-height: 52px
+				color: #4d4d4d
+
+	.divider
+		margin-top: 8px
+		margin-bottom: 8px
+		
+
+
+
+
+
+.lang-switcher
+	display: flex !important
+	align-items: center
+	color: inherit !important
+	img
+		width: 20px
+		margin-right: 13px
+	span
+		font-size: 20px
+
+	
+
+
+.main
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	justify-content: center
+	min-height: 100%
+	&-case
+		padding-top: 35px
+		padding-bottom: 35px
 		width: 100%
+
+.main-title
+	font-size: 32px
+	text-align: center
+	font-weight: 500
+
+
+.search-arrea
+	border: 2px solid rgba(151, 151, 151, 0.3)
+	border-radius: 15px
+	background-color: #fff
+	height: 80px
+	display: flex
+	align-items: center
+	padding-left: 30px
+	padding-right: 30px
+	position: relative
+	margin-top: 36px
+	// cursor: pointer
+	&__inputus
+		font-size: 25px
+		color: #7c7c7c
+		display: none
+	&__input
+		font-size: 25px !important
+		margin-bottom: 0 !important
+		border-bottom: none !important
+		box-shadow: none !important
+		padding-right: 40px !important
+		&::placeholder
+			opacity: 1
+			color: #7c7c7c
+	&__icon
+		position: absolute
+		top: 50%
+		right: 30px
+		transform: translateY(-50%)
+		color: #f8500c
+		font-size: 32px
+		
+
+.companies
+	margin-top: 30px
+	margin-bottom: 30px
+	&__list
+		justify-content: space-between
+		flex-wrap: nowrap
+		margin-left: -1%
+		margin-right: -1%
+	&__item
+		padding-left: 1%
+		padding-right: 1%
+		img
+			width: auto
+			max-width: 100%
+			max-height: 100%
+
+		
+.advantages
+	&__list
+		margin-left: -1%
+		margin-right: -1%
+	&__item
+		width: calc(33.333% - 2%)
+		box-shadow: 0 14px 24px rgba(0, 0, 0, 0.1)
+		background-color: #fff
+		margin-left: 1%
+		margin-right: 1%
+		border-radius: 7px
+		position: relative
+		padding: 20px 30px 20px 64px
+		&:before
+			content: '\f12c'
+			color: #f8500c
+			font-family: "Material Design Icons"
+			top: 50%
+			left: 18px
+			transform: translateY(-50%)
+			position: absolute
+			font-size: 32px
+
+	&__title
+		color: #000000
+		font-size: 16px
+		line-height: 20px
+		font-weight: 500
+		text-transform: uppercase
+		margin-bottom: 6px
+		max-width: 230px
+
+	&__desc
+		font-size: 14px
+		line-height: 16px
+
+.placeholder
+	width: 280px
+	margin-left: auto
+	margin-right: auto
+	margin-top: 25px
+	// display: none
+
+.picker
+	display: none
+
+
+.tabs
+	&__nav
+		text-align: center
+		background-color: #0959aa
+		width: 100%
+
+	.tab
+		margin-left: 30px
+		margin-right: 30px
+		> a
+			color: #fff !important
+			padding-left: 0
+			padding-right: 0
+			opacity: 0.5
+			transition: .3s
+			&.active
+				opacity: 1
+				background-color: transparent !important
+
+	&__list
+		width: 100%
+
+
+	.indicator
+		background-color: #f8500c
+
+
+.collapsible
+	box-shadow: none
+	border: none
+	border-bottom: 1px solid #ddd
+	li.active
+		.collapsible-header
+			&:after
+				transform: rotate(180deg)
+	&-header, &-body
+		background: none
+
+	&-header
+		border-top: 1px solid #ddd
+		border-bottom: none
+		padding-left: 0
+		padding-right: 24px
+		position: relative
+		&:after
+			content: '\f140'
+			font-family: "Material Design Icons"
+			position: absolute
+			top: 50%
+			right: 0
+			color: #f8500c
+			font-size: 27px
+			transition: .3s
+			margin-top: -18px
+
+	&-body
+		border-bottom: none
+		padding: 0
+		padding-bottom: 15px
+
+
+
+.contacts
+	margin-bottom: 0
+	&__office
+		background-position: center
+		background-repeat: no-repeat
+		margin-bottom: 7px
+			
+
+
+.block
+	border-bottom: 1px solid rgba(0,0,0,.1)
+	padding-top: 20px
+	padding-bottom: 24px
+	&_form
+		border-bottom: none
+		padding-bottom: 0
+	&_phones
+		padding-top: 8px
+	&__title
+		font-size: 20px
+		letter-spacing: 1.5px
+		color: #000
+		margin-bottom: 12px
+
+	&__text
+		line-height: 18px
+
+
+
+.phones
+	padding-top: 5px
+	li
+		display: flex
+		align-items: center
+		font-size: 16px
+		margin-bottom: 18px
+		&:last-of-type
+			margin-bottom: 0
+		img
+			width: 26px
+			margin-right: 18px
+
+		a
+			margin-left: auto
+
+
+
+.input
+	&_border
+		.input
+			&__wrap
+				border: 1px solid rgba(151, 151, 151, 0.5) !important
+				border-radius: 7px !important
+				padding-left: 15px !important
+				padding-right: 15px !important
+				margin-bottom: 0 !important
+				height: 52px !important
+				box-shadow: none !important
+				width: 100% !important
+				box-sizing: border-box !important
+				&::placeholder
+					opacity: .5
+					color: #000
 
 
 .textarea
-	position: relative
-	&__wrap
-		display: block
-		font-size: $font-size
-		font-family: $font-family-1
-		background: white
-		width: 100%
-		resize: none
+	&_border
+		.textarea
+			&__wrap
+				border: 1px solid rgba(151, 151, 151, 0.5) !important
+				border-radius: 7px !important
+				padding: 12px 15px !important
+				margin-bottom: 0 !important
+				height: 140px !important
+				box-shadow: none !important
+				width: 100% !important
+				resize: none
+				font-size: 16px
+				box-sizing: border-box !important
+				&::placeholder
+					opacity: .5
+					color: #000
+
 
 .btn
-	position: relative
-	display: flex
-	align-items: center
-	justify-content: center
-	font-size: $font-size
-	font-family: $font-family-1
-	cursor: pointer
-	text-align: center
-	transition: .3s
-	background-color: transparent
-
-.input input, .textarea textarea
-	transition: .3s
-
-input, .btn, .slick-slide, textarea
-	outline: none !important
+	&_orange
+		height: 54px
+		border-radius: 8px
+		background-color: #f8500c
+		box-shadow: none !important
+		text-transform: none
+		font-size: 16px
+		&::hover, &::active
+			background-color: #0959aa
 
 
-.tal
-	text-align: left
+.form
+	&__input, &__textarea
+		margin-bottom: 12px
+	&__btn
+		width: 100%
 
-.tac
-	text-align: center
 
-.tar
-	text-align: right
+.text
+	h2
+		font-size: 20px
+		margin-bottom: 5px
 
-.mid
+
+.order
+	max-width: 400px
+	width: 100%
 	margin-left: auto
 	margin-right: auto
+	background-color: #fff
+	box-shadow: -9px 0 38px rgba(0, 0, 0, 0.1)
+	border-radius: 15px
+	padding: 30px
+	&__title
+		text-align: center
+		opacity: .5
+	&__btn
+		width: 100%
+		margin-top: 15px
+		text-transform: uppercase
+		font-weight: 700
+		letter-spacing: 1.5px
+.input-field.input-field_gray
+	> label
+		font-size: 18px
+		color: rgba(0,0,0,.7)
+	input.active
+		box-shadow: #f8500c
 
 
 
-.main-wrap
-	// overflow-x: hidden
+.lang
+	width: 100%
+	&__list
+		width: 100%
+		ul
+			li
+				width: 100%
+			a
+				display: flex
+				flex-wrap: wrap
+				align-items: center
+				padding: 14px 30px
+				border-bottom: 1px solid #c3c3c3
+				&:hover
+					background-color: rgba(0, 0, 0, 0.05)
+				img
+					width: 30px
+					margin-right: 20px
+				span
+					font-weight: 500
+					font-size: 16px
+
+				&.active
+					span
+						&:after
+							content: '\f12c'
+							font-family: "Material Design Icons"
+							font-size: 22px
+							color: #f8500c
+							margin-left: 10px
+							position: relative
+							top: 3px
+
+.security
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	width: 100%
+	padding-right: 30px
+	padding-left: 30px
+	&__item
+		margin-right: 14px
+		img
+			max-width: 65px
+		&:last-of-type
+			margin-right: 0
+			margin-left: auto
+		
+
+@media screen and (min-width: 993px)
+	.sidenav
+		width: 425px
+	.container
+		width: 90%
+
+@media screen and (max-width: 992px)
+	.nav
+		padding-left: 15px
+		padding-right: 15px
+		line-height: 50px
+		height: 50px
+		a.sidenav-trigger
+			font-size: 28px
+			margin-right: 15px
+			height: 50px
+			line-height: 50px
+		.brand-logo
+			font-size: 18px
+			left: 0
+			position: static
+			transform: none
+
+	.lang-switcher
+		img
+			width: 18px
+			margin-right: 5px
+		span
+			font-size: 17px
+
+
+	.sidenav
+		&__close
+			margin-top: 15px
+			margin-bottom: 10px
+			padding-left: 15px
+			padding-right: 15px
+			i
+				font-size: 20px
+				line-height: 20px
+				width: 20px
+				margin-right: 15px
+			span
+				font-size: 20px
+		&__list
+			li
+				> a
+					padding-left: 15px
+					padding-right: 15px
+					height: 40px
+					line-height: 40px
+					> i
+						margin-right: 15px
+						height: 40px
+						line-height: 40px
+					span
+						font-size: 14px
+	.container
+		width: 100%
+
+	.main-wrap
+		padding-top: 50px
+
+	.main-case
+		padding-top: 20px
+		padding-bottom: 20px
+
+	.main-title
+		font-size: 22px
+	
+	.search-arrea
+		height: 50px
+		border-radius: 5px
+		border: 1px solid rgba(151, 151, 151, 0.3)
+		padding-left: 15px
+		padding-right: 15px
+		margin-top: 15px
+		&__input
+			font-size: 16px !important
+			padding-right: 35px !important
+		&__icon
+			font-size: 24px
+			right: 15px
+
+	.companies
+		margin-top: 20px
+		margin-bottom: 20px
+		
+	.advantages
+		&__list
+			padding-left: 30px
+			padding-right: 30px
+			.slick-arrow
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				font-size: 0
+				background: none
+				opacity: .8
+				transition: .3s
+				z-index: 1
+				cursor: pointer
+				&:hover
+					opacity: 1
+				&:after
+					display: block
+					font-size: 32px
+					font-family: "Material Design Icons"
+			.slick-prev
+				left: 0
+				&:after
+					content: '\f141'
+			.slick-next
+				right: 0
+				&:after
+					content: '\f142'
+		&__item
+			margin-left: 0
+			margin-right: 0
+			box-shadow: none
 
 
 
+	.security
+		padding-left: 15px
+		padding-right: 15px
+
+	.contacts
+		.col
+			padding-left: 0
+			padding-right: 0
+		
+	.lang
+		&__list
+			ul
+				a
+					padding: 12px 15px
+					img
+						width: 24px
+						margin-right: 15px
+
+@media screen and (max-width: 590px)
+	.tabs
+		overflow: visible
+		height: auto
+		&__nav
+			ul
+				display: flex
+				flex-direction: column
+				width: 100%
+			a
+				border-left: 2px solid transparent
+				&.active
+					border-color: #f8500c
+
+		.indicator
+			display: none
 
 
-.hidden-lg
-	display: none
+		.tab
+			margin-left: 0
+			margin-right: 0
+			width: 100%
+			line-height: 40px
+			height: 40px
+
+
+@media screen and (max-width: 560px)
+	.companies
+		&__list
+			flex-wrap: wrap
+			justify-content: center
+		&__item
+			width: 25%
+			padding-left: 4px
+			padding-right: 4px
+
+	.placeholder
+		width: 200px
+		margin-top: 25px
+	.advantages
+		&__item
+			padding: 15px 15px 15px 45px
+			&:before
+				font-size: 26px
+				left: 10px
+		&__title
+			font-size: 15px
+	.security
+		&__item
+			margin-right: 10px
+			img
+				max-width: 55px
+
+	.order
+		padding: 20px
