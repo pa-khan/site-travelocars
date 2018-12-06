@@ -13,26 +13,14 @@ $(document).ready(function($) {
 
 	$('.collapsible').collapsible();
 
-	// slider
-  $slick_slider = $('.advantages__list');
-  settings_slider = {
-  	adaptiveHeight: true
-    // more settings
-  }
-  slick_on_mobile( $slick_slider, settings_slider);
-
-// slick on mobile
-  function slick_on_mobile(slider, settings){
-    $(window).on('load resize', function() {
-      if ($(window).width() > 992) {
-        if (slider.hasClass('slick-initialized')) {
-          slider.slick('unslick');
-        }
-        return
+  $('.advantages__list').slick({
+    slidesToShow: 3,
+    responsive: [{
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 1,
+        adaptiveHeight: true
       }
-      if (!slider.hasClass('slick-initialized')) {
-        return slider.slick(settings);
-      }
-    });
-  };
+    }]
+  })
 });
