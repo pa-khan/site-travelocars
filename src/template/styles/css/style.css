@@ -17390,7 +17390,21 @@ html, body {
     padding-top: 20px;
     padding-bottom: 40px;
     padding-left: 1%;
-    padding-right: 1%; }
+    padding-right: 1%;
+    float: none;
+    height: auto; }
+    .advantages__list .slick-slide > div {
+      height: 100%; }
+  .advantages__list .slick-track {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    .advantages__list .slick-track:before, .advantages__list .slick-track:after {
+      display: none; }
 
 .advantages__item {
   -webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -17399,7 +17413,8 @@ html, body {
   -webkit-border-radius: 7px;
           border-radius: 7px;
   position: relative;
-  padding: 20px 30px 20px 64px; }
+  padding: 20px 30px 20px 64px;
+  height: 100%; }
   .advantages__item:before {
     content: '\f12c';
     color: #f8500c;

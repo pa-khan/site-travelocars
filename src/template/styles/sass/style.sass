@@ -192,12 +192,22 @@ html, body
 			padding-bottom: 40px
 			padding-left: 1%
 			padding-right: 1%
+			float: none
+			height: auto
+			> div
+				height: 100%
+		.slick-track
+			display: flex
+			flex-wrap: wrap
+			&:before, &:after
+				display: none
 	&__item
 		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1)
 		background-color: #fff
 		border-radius: 7px
 		position: relative
 		padding: 20px 30px 20px 64px
+		height: 100%
 		&:before
 			content: '\f12c'
 			color: #f8500c
